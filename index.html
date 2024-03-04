@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confeitaria Com Carinho e Com Afeto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="brand">Confeitaria da Maria</div>
+        <div class="menu-icon">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#bolos">Bolos</a></li>
+                 <li><a href="#outrosprodutos"> Outros Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <section id="sobre">
+      <div class="sobre-texto">
+          <h2>Com carinho e com afeto</h2>
+          <p>Conheça nossa confeitaria, feita com amor e dedicação pela confeiteira Maria.</p>
+      </div>
+      <div class="sobre-imagem">
+          <img src="confeiteira.png" alt="Confeitaria da Maria">
+      </div>
+  </section>
+
+  <section id="bolos">
+      <h2 class="color2">Nossos Bolos</h2>
+      <div class="carousel-container">
+          <div class="carousel">
+              <img src="bolo1.jpg" alt="Bolo 1">
+              <img src="bolo2.jpg" alt="Bolo 2">
+              <img src="bolo3.jpg" alt="Bolo 3">
+              <img src="bolo4.jpg" alt="Bolo 4">
+              <img src="bolo5.jpg" alt="Bolo 5">
+      
+          </div>
+          <button id="prevBtn">Anterior</button>
+          <button id="nextBtn">Próximo</button>
+      </div>
+  </section>
+
+  <section id="outrosprodutos">
+      <h2 class="color3">Outros Produtos</h2>
+      <ul class="produtos-lista">
+          <li class="produto">
+              <img src="salgados.jpeg" alt="Salgados">
+              <h3>Salgados</h3>
+          </li>
+          <li class="produto">
+              <img src="tortassalgadas.jpg" alt="Tortas Salgadas">
+              <h3>Tostas Salgadas</h3>
+          </li>
+          <li class="produto">
+              <img src="paometro.jpg" alt="Pão de Metro">
+              <h3>Pão de Metro</h3>
+          </li>
+          <li class="produto">
+              <img src="paozinhodelicia.jpg" alt="Pãozinho Delícia">
+              <h3>Pãozinho Delícia</h3>
+          </li>
+      </ul>
+  </section>
+
+  <section id="contato" class="contato-section">
+      <!-- Conteúdo da seção de contato aqui -->
+      <div class="contato-container">
+          <div class="imagem-contato">
+              <img src="confeiteira2.png" alt="Confeitaria da Maria">
+          </div>
+          <div class="formulario">
+              <h3>Preencha o formulário abaixo:</h3>
+              <form>
+                  <div class="form-group">
+                      <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                  </div>
+                  <div class="form-group">
+                      <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                  </div>
+                  <div class="form-group">
+                      <textarea id="mensagem" name="mensagem" placeholder="Sua Mensagem" required></textarea>
+                  </div>
+                  <input type="submit" class="enviar-btn-contato" value="Enviar">
+              </form>
+          </div>
+      </div>
+  </section>
+  <footer>
+      Feito com <span class="heart">&#10084;</span> por Isabella Moreira
+  </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

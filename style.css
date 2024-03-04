@@ -1,0 +1,381 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+/* Cores do site */
+.color1 { color: #a70267; }
+.color2 { color: #f10c49; }
+.color3 { color: #fb6b41; }
+.color4 { color: #f6d86b; }
+.color5 { color: #339194; }
+
+/* Estilos para a header */
+header {
+    background-color: #a70267; /* cor1 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilos para a marca */
+.brand {
+    color: #fff; 
+    font-size: 24px;
+}
+
+/* Estilos para o ícone do menu hamburguer */
+.menu-icon {
+    display: none;
+    color: #fff; 
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para a navegação */
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* fundo branco transparente no hover */
+}
+
+/* Estilos para a responsividade */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #a70267; /* cor1 */
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Estilos para a seção Sobre */
+#sobre {
+  color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #f6d86b;
+  font-size: 50px;
+}
+
+.sobre-imagem {
+    flex: 1;
+    text-align: center;
+}
+
+.sobre-imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sobre-texto {
+    flex: 1;
+    text-align: center;
+    padding-left: 50px;
+}
+
+.sobre-texto h2 {
+    margin-bottom: 20px;
+  
+}
+
+.sobre-texto p {
+    margin: 0;
+}
+
+/* Estilos para texto responsivo */
+@media screen and (max-width: 768px) {
+    #sobre {
+        flex-direction: column;
+      font-size: 25px;
+    }
+
+    .sobre-imagem,
+    .sobre-texto {
+        padding: 0;
+    }
+
+    .sobre-texto {
+        padding-top: 20px;
+    }
+}
+
+/* Estilos para a seção Bolos */
+#bolos {
+    padding: 50px;
+    background-color: #f10c49; 
+    text-align: center;
+}
+
+#bolos h2 {
+    color: #fff; 
+    font-size: 30px;
+}
+/* Estilos para a seção Bolos */
+#bolos {
+    padding: 50px;
+    background-color: #f10c49; /* cor2 */
+    text-align: center;
+}
+
+#bolos h2 {
+    color: #fff; /* cor do texto branco */
+    font-size: 30px;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel img {
+    width: 30%;
+    height: 80%;
+    object-fit: cover;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #fff; /* cor do texto branco */
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+/* Estilos para responsividade */
+@media screen and (max-width: 768px) {
+    .carousel img {
+        width: 100%;
+    }
+}
+
+/* Estilos para a seção Outros Produtos */
+#outrosprodutos {
+    padding: 50px;
+    background-color: #fb6b41; /* cor3 */
+    text-align: center;
+}
+
+#outrosprodutos h2 {
+    color: #fff; /* cor do texto branco */
+    font-size: 30px;
+}
+
+.produtos-lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.produto {
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #fff; /* cor de fundo branca */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex: 1 0 200px;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    aspect-ratio: 1/1; /* Garante que a imagem tenha uma proporção quadrada */
+}
+
+.produto h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/* Estilos para responsividade */
+@media screen and (max-width: 768px) {
+    .produto {
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para a seção de contato */
+.contato-section {
+    padding: 50px;
+    background-color: #339194; /* cor5 */
+    text-align: center;
+}
+
+.contato-section h2 {
+    color: #fff; /* cor do texto branco */
+    font-size: 30px;
+}
+
+.contato-container {
+    display: flex;
+    flex-direction: column; /* Alinhar itens em coluna por padrão */
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-contato {
+    width: 100%; /* Para ocupar toda a largura */
+}
+
+.imagem-contato img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.formulario {
+    padding: 20px;
+    background-color: #fff; /* cor de fundo branca */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Adicionar margem superior para separar da imagem */
+    width: 100%; /* Para ocupar toda a largura */
+}
+
+.formulario h3 {
+    color: #f6d86b; /* cor4 */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 22px); /* Considerando a largura do padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+}
+
+.enviar-btn-contato {
+    background-color: #f6d86b; /* cor4 */
+    color: #fff; /* cor do texto branco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Adicionar margem superior */
+}
+
+/* Responsividade */
+@media screen and (min-width: 768px) {
+    .contato-container {
+        flex-direction: row; /* Alinhar itens em linha em telas maiores */
+    }
+
+    .imagem-contato {
+        width: 50%; /* Para ocupar metade da largura */
+        padding-right: 20px; /* Espaçamento à direita para separar do formulário */
+    }
+
+    .formulario {
+        width: 50%; /* Para ocupar metade da largura */
+        margin-top: 0; /* Remover margem superior para alinhar com a imagem */
+    }
+}
+/* Estilos para o footer */
+footer {
+    background-color: #a70267; /* cor1 */
+    color: #fff; /* cor do texto branco */
+    text-align: center;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para o ícone de coração */
+.heart {
+    color: #f10c49; /* cor2 */
+}
