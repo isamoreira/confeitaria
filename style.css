@@ -2,6 +2,12 @@ html {
   height: 100%;
   width: 100%;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
 /* Cores do site */
 .color1 { color: #a70267; }
 .color2 { color: #f10c49; }
